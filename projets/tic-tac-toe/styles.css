@@ -1,38 +1,122 @@
+.slackey-regular {
+  font-family: "Slackey", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Slackey", sans-serif;
   text-align: center;
-  background: #f0f0f0;
+  background: #e961a4;
+  color: #8a004f;
+  margin: 0;
+  padding: 0;
 }
+
 h1 {
-  margin-top: 20px;
+  margin-top: 30px;
+  font-size: 48px;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px #c03b80;
 }
+
+.difficulty {
+  margin: 20px;
+}
+
+button {
+  font-family: "Slackey", sans-serif;
+}
+
+.difficulty button {
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #d1006f;
+  box-shadow: 0 5px #c03b80;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.difficulty button:active {
+  transform: translateY(2px);
+}
+
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 5px;
-  margin: 20px auto;
-  width: max-content;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
 }
+
 .cell {
   background: white;
-  border: 2px solid #333;
-  font-size: 3rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #d1006f;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 0 8px #c03b80;
+  transition: transform 0.1s;
 }
+
 .cell.taken {
   cursor: not-allowed;
 }
+
 .status {
-  margin-top: 20px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-shadow: 1px 1px #c03b80;
 }
+
 .reset {
   margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 12px 25px;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #d1006f;
+  font-size: 1.1rem;
   cursor: pointer;
+  box-shadow: 0 6px #c03b80;
+  transition: transform 0.1s;
+}
+
+.reset:active {
+  transform: translateY(2px);
+}
+.difficulty {
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.difficulty button {
+  background: #fff;
+  color: #d14b8f;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px #c03d7b;
+  transition: all 0.2s ease;
+}
+
+.difficulty button.selected {
+  background: #d14b8f;
+  color: #f3f3f3;
+  box-shadow: 0 4px #9c3262;
 }
